@@ -82,6 +82,30 @@
 
     <div class="project card">
       <div class="project-title-row">
+        <h3 class="project-title">Multi-Source Job Aggregation &amp; Tracking Pipeline</h3>
+        <a class="project-link" href="https://github.com/junhao21xd/personal_job_scraper" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <p class="desc">
+        Dual-source scraping pipeline combining the jobspy library (Indeed, LinkedIn) with a custom Apify actor
+        (JobStreet SG), reconciled into a unified schema. A regex and FlashText
+        tagging engine extracts years of experience, seniority, and visa signals and classifies listings across 5 tech
+        categories, benchmarked against Sentence-Transformer and NLI zero-shot baselines. A WAL-mode SQLite
+        database backs an interactive Streamlit dashboard with idempotent upserts, letting the scraper and UI
+        read/write concurrently without losing manual edits. Resume-to-JD fit ranking combines Nomic dense
+        embeddings and BM25 sparse retrieval via Reciprocal Rank Fusion.
+      </p>
+      <div class="tags">
+        <span class="tag">Web Scraping</span>
+        <span class="tag">Apify</span>
+        <span class="tag">FlashText</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">RRF</span>
+      </div>
+    </div>
+
+    <div class="project card">
+      <div class="project-title-row">
         <h3 class="project-title">Advanced Academic RAG API</h3>
         <a class="project-link" href="https://github.com/junhao21xd/rag-pipeline-gemini" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
