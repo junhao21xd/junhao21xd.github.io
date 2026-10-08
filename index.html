@@ -110,11 +110,14 @@
         <a class="project-link" href="https://github.com/junhao21xd/rag-pipeline-gemini" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p class="desc">
-        Asynchronous FastAPI service for retrieval-augmented generation over PDF/DOCX/PPTX documents. Combines
-        HyDE query expansion, BM25 sparse search, and Gemini dense retrieval via Reciprocal Rank Fusion, then
-        reranks with Cohere's cross-encoder before generating source-cited answers. CI/CD via GitHub Actions
-        (pytest, Ruff).
+        A production-grade, asynchronous RAG microservice engineered for high-precision document querying, hybrid retrieval, and agentic web fallback.
       </p>
+      <ul class="features-list">
+        <li><strong>Core Stack & Ingestion:</strong> FastAPI backend utilizing sliding-window chunking to parse PDF, DOCX, and PPTX documents into ChromaDB.</li>
+        <li><strong>Hybrid Search & Reranking:</strong> Multi-stage retrieval combining HyDE, BM25, and dense embeddings via Reciprocal Rank Fusion (RRF), optimized with Cohere Cross-Encoders.</li>
+        <li><strong>Agentic Routing:</strong> LangGraph workflow featuring confidence-based classification to trigger external web search fallback when source context is insufficient.</li>
+        <li><strong>Evaluation & DevOps:</strong> Custom evaluation framework using LLM-as-a-judge metrics, safeguarded by rate-limiting and automated CI/CD (pytest, Ruff, GitHub Actions).</li>
+      </ul>
       <div class="tags">
         <span class="tag">FastAPI</span>
         <span class="tag">RAG</span>
