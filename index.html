@@ -86,14 +86,14 @@
         <a class="project-link" href="https://github.com/junhao21xd/personal_job_scraper" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p class="desc">
-        Dual-source scraping pipeline combining the jobspy library (Indeed, LinkedIn) with a custom Apify actor
-        (JobStreet SG), reconciled into a unified schema. A regex and FlashText
-        tagging engine extracts years of experience, seniority, and visa signals and classifies listings across 5 tech
-        categories, benchmarked against Sentence-Transformer and NLI zero-shot baselines. A WAL-mode SQLite
-        database backs an interactive Streamlit dashboard with idempotent upserts, letting the scraper and UI
-        read/write concurrently without losing manual edits. Resume-to-JD fit ranking combines Nomic dense
-        embeddings and BM25 sparse retrieval via Reciprocal Rank Fusion.
+        An end-to-end job market intelligence platform featuring multi-source scraping, automated attribute extraction, and hybrid resume-to-job matching.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Multi-Source Scraping: Aggregates listings from Indeed and LinkedIn via JobSpy, and JobStreet SG via a custom Apify actor into a unified schema.</li>
+        <li>Attribute Extraction: Leverages regex and FlashText for high-speed entity extraction (experience, seniority, visa) benchmarked against zero-shot NLI models.</li>
+        <li>Database & Dashboard: Backed by a WAL-mode SQLite database enabling concurrent read/write access for an interactive Streamlit dashboard supporting manual edits.</li>
+        <li>Hybrid Matching: Computes resume-to-job fit using Nomic dense embeddings and BM25 sparse retrieval fused via Reciprocal Rank Fusion (RRF).</li>
+      </ul>
       <div class="tags">
         <span class="tag">Web Scraping</span>
         <span class="tag">Apify</span>
@@ -112,7 +112,7 @@
       <p class="desc">
         A production-grade, asynchronous RAG microservice engineered for high-precision document querying, hybrid retrieval, and agentic web fallback.
       </p>
-      <ul class="features-list" style="font-size: 0.9rem; color: #555;">
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
         <li>FastAPI backend utilizing sliding-window chunking to parse PDF, DOCX, and PPTX documents into ChromaDB.</li>
         <li>Multi-stage retrieval combining HyDE, BM25, and dense embeddings via Reciprocal Rank Fusion (RRF), optimized with Cohere Cross-Encoders.</li>
         <li>LangGraph workflow featuring confidence-based classification to trigger external web search fallback when source context is insufficient.</li>
