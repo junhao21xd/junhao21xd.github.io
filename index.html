@@ -89,10 +89,10 @@
         An end-to-end job market intelligence platform featuring multi-source scraping, automated attribute extraction, and hybrid resume-to-job matching.
       </p>
       <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
-        <li>Multi-Source Scraping: Aggregates listings from Indeed and LinkedIn via JobSpy, and JobStreet SG via a custom Apify actor into a unified schema.</li>
-        <li>Attribute Extraction: Leverages regex and FlashText for high-speed entity extraction (experience, seniority, visa) benchmarked against zero-shot NLI models.</li>
-        <li>Database & Dashboard: Backed by a WAL-mode SQLite database enabling concurrent read/write access for an interactive Streamlit dashboard supporting manual edits.</li>
-        <li>Hybrid Matching: Computes resume-to-job fit using Nomic dense embeddings and BM25 sparse retrieval fused via Reciprocal Rank Fusion (RRF).</li>
+        <li>Multi-source scraping aggregates listings from Indeed and LinkedIn via JobSpy, and JobStreet SG via a custom Apify actor into a unified schema.</li>
+        <li>Attribute extraction leverages regex and FlashText for high-speed entity parsing (experience, seniority, visa) benchmarked against zero-shot NLI models.</li>
+        <li>Database architecture uses WAL-mode SQLite to back an interactive Streamlit dashboard, enabling concurrent read/write access for manual edits.</li>
+        <li>Hybrid matching computes resume-to-job fit using Nomic dense embeddings and BM25 sparse retrieval fused via Reciprocal Rank Fusion (RRF).</li>
       </ul>
       <div class="tags">
         <span class="tag">Web Scraping</span>
@@ -114,9 +114,9 @@
       </p>
       <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
         <li>FastAPI backend utilizing sliding-window chunking to parse PDF, DOCX, and PPTX documents into ChromaDB.</li>
-        <li>Multi-stage retrieval combining HyDE, BM25, and dense embeddings via Reciprocal Rank Fusion (RRF), optimized with Cohere Cross-Encoders.</li>
-        <li>LangGraph workflow featuring confidence-based classification to trigger external web search fallback when source context is insufficient.</li>
-        <li>Custom evaluation framework using LLM-as-a-judge metrics, safeguarded by rate-limiting and automated CI/CD (pytest, Ruff, GitHub Actions).</li>
+        <li>Multi-stage retrieval combines HyDE, BM25, and dense embeddings via Reciprocal Rank Fusion (RRF), optimized with Cohere Cross-Encoders.</li>
+        <li>LangGraph workflow features confidence-based classification to trigger external web search fallback when source context is insufficient.</li>
+        <li>Custom evaluation framework uses LLM-as-a-judge metrics, safeguarded by rate-limiting and automated CI/CD (pytest, Ruff, GitHub Actions).</li>
       </ul>
       <div class="tags">
         <span class="tag">FastAPI</span>
@@ -134,10 +134,13 @@
         <a class="project-link" href="https://github.com/junhao21xd/FYP-CCDS25-0121-SER" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p class="desc">
-        Multimodal SER framework fine-tuning Llama-3-8B on combined ASR transcripts (Whisper) and acoustic
-        features (OpenSMILE/eGeMAPS). Achieved 72.0% Macro-F1 on IEMOCAP, outperforming the SpeechCueLLM
-        baseline by 1.3% absolute.
+        Multimodal SER framework fine-tuning Llama-3-8B on combined ASR transcripts (Whisper) and acoustic features (OpenSMILE/eGeMAPS). Achieved 72.0% Macro-F1 on IEMOCAP, outperforming the SpeechCueLLM baseline by 1.3% absolute.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Model fine-tuning adapts Llama-3-8B into a multimodal speech emotion recognition framework processing combined ASR transcripts via OpenAI Whisper and acoustic features via OpenSMILE/eGeMAPS.</li>
+        <li>Structured prompting designs integrate numerical acoustic data efficiently into the LLM context window while minimizing token noise and automating feature selection.</li>
+        <li>Benchmark performance achieves 72.0% Macro-F1 on IEMOCAP, outperforming the SpeechCueLLM baseline by 1.3% absolute, alongside competitive validation on MSP-Podcast.</li>
+      </ul>
       <div class="tags">
         <span class="tag">LLM Fine-tuning</span>
         <span class="tag">Whisper</span>
@@ -153,10 +156,13 @@
         <a class="project-link" href="https://github.com/junhao21xd/nasa-asteroid-ETL-pipeline" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p class="desc">
-        PySpark pipeline extracting near-earth object data from NASA's API, transforming nested JSON into
-        structured Parquet datasets loaded into AWS S3 with data-uniqueness validation. Orchestrated end-to-end
-        via GitHub Actions.
+        PySpark pipeline extracting near-earth object data from NASA's API, transforming nested JSON into structured Parquet datasets loaded into AWS S3 with data-uniqueness validation. Orchestrated end-to-end via GitHub Actions.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Data extraction and transformation uses a PySpark pipeline to pull raw asteroid data from the NASA API, converting complex nested JSON structures into clean, tabular datasets.</li>
+        <li>Cloud storage optimization converts processed datasets into Parquet and loads them into AWS S3, backed by strict validation logic to guarantee data uniqueness across repeated or failed runs.</li>
+        <li>Pipeline orchestration manages the end-to-end automated workflow via GitHub Actions, establishing a scalable and decoupled architecture ready for downstream integrations.</li>
+      </ul>
       <div class="tags">
         <span class="tag">PySpark</span>
         <span class="tag">AWS S3</span>
@@ -171,10 +177,13 @@
         <a class="project-link" href="https://github.com/junhao21xd/SC4002-NLP" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p class="desc">
-        Benchmarked LSTM vs. Transformer architectures for question classification, using SHAP for prediction
-        interpretability and an LLM-driven synthetic data augmentation pipeline to address data scarcity, plus
-        transfer learning on pretrained NLP models.
+        Benchmarked LSTM vs. Transformer architectures for question classification, using SHAP for prediction interpretability and an LLM-driven synthetic data augmentation pipeline to address data scarcity, plus transfer learning on pretrained NLP models.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Architecture benchmarking evaluates performance across models like LSTMs and Transformers, integrating SHAP (Explainable AI) to interpret predictions and validate feature importance.</li>
+        <li>Synthetic data generation overcomes data scarcity by implementing an LLM-driven augmentation pipeline that produces training samples to boost model robustness in low-resource regimes.</li>
+        <li>Transfer learning applies pre-trained NLP architectures to maximize classification accuracy and generalizability across limited labeled datasets.</li>
+      </ul>
       <div class="tags">
         <span class="tag">NLP</span>
         <span class="tag">Transformers</span>
@@ -189,10 +198,13 @@
         <a class="project-link" href="https://github.com/junhao21xd/SC1015-DSAI-Project" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p class="desc">
-        Benchmarked six regression models (Linear, Polynomial, LightGBM, Gradient Boosting, Random Forest,
-        XGBoost) with 5-fold cross-validation and GridSearchCV tuning, then combined the top performers into a
-        stacking ensemble achieving under 10% MAPE.
+        Benchmarked six regression models (Linear, Polynomial, LightGBM, Gradient Boosting, Random Forest, XGBoost) with 5-fold cross-validation and GridSearchCV tuning, then combined the top performers into a stacking ensemble achieving under 10% MAPE.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Exploratory data analysis and feature engineering identifies key predictors, cleans input data, and applies distribution transformations and categorical encoding to boost model robustness.</li>
+        <li>Model benchmarking and optimization evaluates six regression algorithms using 5-fold cross-validation and tunes top-performing architectures through GridSearchCV hyperparameter search.</li>
+        <li>Ensemble learning combines top-performing gradient boosting, random forest, XGBoost, and LightGBM models into a stacking regressor that achieves under 10% Mean Absolute Percentage Error (MAPE) for box office revenue prediction.</li>
+      </ul>
       <div class="tags">
         <span class="tag">Regression</span>
         <span class="tag">Ensemble Learning</span>
@@ -206,10 +218,14 @@
         <h3 class="project-title">Horse Health Outcome Prediction</h3>
       </div>
       <p class="desc">
-        Addressed imbalanced multi-class prediction with SMOTE + Tomek Links resampling and RFE feature
-        selection; benchmarked Random Forest, LightGBM, XGBoost, CatBoost, and HistGradientBoosting, then
-        optimised an Optuna-weighted ensemble to a 0.8476 leaderboard score.
+        Addressed imbalanced multi-class prediction with SMOTE + Tomek Links resampling and RFE feature selection; benchmarked Random Forest, LightGBM, XGBoost, CatBoost, and HistGradientBoosting, then optimised an Optuna-weighted ensemble to a 0.8476 leaderboard score.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Exploratory data analysis and feature engineering handles domain-informed missing-value imputation, standardizes categorical variables, and builds model-ready features via ordinal and one-hot encoding while removing redundancies.</li>
+        <li>Imbalanced learning and feature selection combines SMOTE and Tomek Links resampling with Recursive Feature Elimination (RFE) and LightGBM importance analysis to isolate key predictive factors.</li>
+        <li>Model benchmarking evaluates algorithms including Random Forest, LightGBM, XGBoost, CatBoost, and HistGradientBoosting using micro-averaged F1-scores, optimized via hyperparameter tuning and early stopping.</li>
+        <li>Ensemble optimization utilizes Optuna-based weight tuning to merge top-performing variants, achieving a public leaderboard score of 0.8476.</li>
+      </ul>
       <div class="tags">
         <span class="tag">Imbalanced Learning</span>
         <span class="tag">LightGBM</span>
@@ -222,9 +238,13 @@
         <h3 class="project-title">California Weather Clustering</h3>
       </div>
       <p class="desc">
-        Applied Agglomerative Hierarchical Clustering and DBSCAN with PCA dimensionality reduction to segment
-        California climate zones and identify anomalous rainy-day outliers.
+        Applied Agglomerative Hierarchical Clustering and DBSCAN with PCA dimensionality reduction to segment California climate zones and identify anomalous rainy-day outliers.
       </p>
+      <ul class="features-list" style="font-size: 0.9rem; color: var(--muted);">
+        <li>Clustering optimization implements Agglomerative Hierarchical Clustering (AHC) and DBSCAN, boosting performance through PCA dimensionality reduction and hyperparameter tuning.</li>
+        <li>Geographical weather segmentation uses AHC models to isolate distinct precipitation patterns, effectively separating high-humidity rainy zones from dry regions.</li>
+        <li>Anomaly and noise detection leverages DBSCAN to flag rare weather events, successfully isolating outlier rainy days against the predominant California dry-climate baseline.</li>
+      </ul>
       <div class="tags">
         <span class="tag">Clustering</span>
         <span class="tag">DBSCAN</span>
